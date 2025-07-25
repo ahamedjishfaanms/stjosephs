@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events - St. Joseph's College</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader-content">
+      <img src="image/preloader.gif" alt="Loading...">
+      <div class="loading-text">Loading Events...</div>
+    </div>
+  </div>
+
+  <!-- Top Section -->
+  <div class="top-section">
+    <div class="contact-info">
+      <a href="mailto:info@example.com">
+        <i class="fas fa-envelope"></i>
+        <span class="contact-text">info@example.com</span>
+      </a>
+      <a href="tel:+1234567890">
+        <i class="fas fa-phone"></i>
+        <span class="contact-text">+123 456 7890</span>
+      </a>
+    </div>
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="Image/NEW LOGO.png" alt="Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="about">
+        <a href="#">About</a>
+        <ul class="sub-menu">
+          <li><a href="department.html">Department</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="clubs.html">Clubs</a></li>
+        </ul>
+      </li>
+      <li class="activities active">
+        <a href="#">Activities</a>
+        <ul class="sub-menu">
+          <li><a href="events.html">Events</a></li>
+          <li><a href="placement.html">Placement</a></li>
+        </ul>
+      </li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="login.html" class="login">Login</a></li>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+
+  <!-- Events Hero Section -->
+  <section class="events-hero">
+    <div class="events-hero-content">
+      <h1>College Events</h1>
+      <p>Discover our upcoming and past events</p>
+    </div>
+  </section>
+
+  <!-- Events Filter Section -->
+  <section class="events-filter">
+    <div class="filter-container">
+      <div class="filter-options">
+        <button class="filter-btn active" data-filter="all">All Events</button>
+        <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+        <button class="filter-btn" data-filter="past">Past Events</button>
+        <button class="filter-btn" data-filter="workshop">Workshops</button>
+        <button class="filter-btn" data-filter="seminar">Seminars</button>
+      </div>
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="events-search" placeholder="Search events...">
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section class="events-section">
+    <div class="events-container">
+      <div class="section-header">
+        <h2 class="section-title">Our Events</h2>
+        <p class="section-subtitle">Engaging activities for students and faculty</p>
+      </div>
+      
+      <div class="events-grid" id="events-container">
+        <!-- Events will be dynamically loaded here -->
+        <div class="event-card" data-category="upcoming" data-date="2024-06-15">
+          <div class="event-image">
+            <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Tech Symposium">
+            <div class="event-date">
+              <span class="day">15</span>
+              <span class="month">Jun</span>
+            </div>
+          </div>
+          <div class="event-content">
+            <h3>Annual Tech Symposium</h3>
+            <div class="event-meta">
+              <span><i class="far fa-calendar-alt"></i> June 15, 2024</span>
+              <span><i class="fas fa-map-marker-alt"></i> Main Auditorium</span>
+            </div>
+            <p>Join us for our annual technology symposium featuring industry leaders and innovative student projects.</p>
+            <a href="#" class="event-btn">Learn More</a>
+          </div>
+        </div>
+        
+        <div class="event-card" data-category="past" data-date="2024-05-20">
+          <div class="event-image">
+            <img src="https://images.unsplash.com/photo-1524179091875-bf99a9a6af57?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Cultural Fest">
+            <div class="event-date">
+              <span class="day">20</span>
+              <span class="month">May</span>
+            </div>
+          </div>
+          <div class="event-content">
+            <h3>Cultural Festival 2024</h3>
+            <div class="event-meta">
+              <span><i class="far fa-calendar-alt"></i> May 20, 2024</span>
+              <span><i class="fas fa-map-marker-alt"></i> College Ground</span>
+            </div>
+            <p>A celebration of diverse cultures with performances, food stalls, and art exhibitions from across India.</p>
+            <a href="#" class="event-btn">View Photos</a>
+          </div>
+        </div>
+        
+        <div class="event-card" data-category="workshop" data-date="2024-07-10">
+          <div class="event-image">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="AI Workshop">
+            <div class="event-date">
+              <span class="day">10</span>
+              <span class="month">Jul</span>
+            </div>
+          </div>
+          <div class="event-content">
+            <h3>AI & Machine Learning Workshop</h3>
+            <div class="event-meta">
+              <span><i class="far fa-calendar-alt"></i> July 10, 2024</span>
+              <span><i class="fas fa-map-marker-alt"></i> CS Lab 3</span>
+            </div>
+            <p>Hands-on workshop covering the fundamentals of artificial intelligence and machine learning applications.</p>
+            <a href="#" class="event-btn">Register Now</a>
+          </div>
+        </div>
+        
+        <div class="event-card" data-category="seminar" data-date="2024-06-05">
+          <div class="event-image">
+            <img src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Career Seminar">
+            <div class="event-date">
+              <span class="day">05</span>
+              <span class="month">Jun</span>
+            </div>
+          </div>
+          <div class="event-content">
+            <h3>Career Guidance Seminar</h3>
+            <div class="event-meta">
+              <span><i class="far fa-calendar-alt"></i> June 5, 2024</span>
+              <span><i class="fas fa-map-marker-alt"></i> Seminar Hall</span>
+            </div>
+            <p>Industry experts share insights on career opportunities in technology and how to prepare for them.</p>
+            <a href="#" class="event-btn">Learn More</a>
+          </div>
+        </div>
+        
+        <div class="event-card" data-category="upcoming" data-date="2024-08-22">
+          <div class="event-image">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Hackathon">
+            <div class="event-date">
+              <span class="day">22</span>
+              <span class="month">Aug</span>
+            </div>
+          </div>
+          <div class="event-content">
+            <h3>Annual Hackathon</h3>
+            <div class="event-meta">
+              <span><i class="far fa-calendar-alt"></i> August 22, 2024</span>
+              <span><i class="fas fa-map-marker-alt"></i> Innovation Center</span>
+            </div>
+            <p>24-hour coding competition where students solve real-world problems with innovative tech solutions.</p>
+            <a href="#" class="event-btn">Register Now</a>
+          </div>
+        </div>
+        
+        <div class="event-card" data-category="past" data-date="2024-04-15">
+          <div class="event-image">
+            <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Sports Day">
+            <div class="event-date">
+              <span class="day">15</span>
+              <span class="month">Apr</span>
+            </div>
+          </div>
+          <div class="event-content">
+            <h3>Sports Day 2024</h3>
+            <div class="event-meta">
+              <span><i class="far fa-calendar-alt"></i> April 15, 2024</span>
+              <span><i class="fas fa-map-marker-alt"></i> Sports Complex</span>
+            </div>
+            <p>Annual sports competition featuring athletics, team sports, and fun activities for all students.</p>
+            <a href="#" class="event-btn">View Photos</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="load-more">
+        <button id="load-more-events" class="btn">Load More Events</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event Modal -->
+  <div class="event-modal" id="event-modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-body">
+        <div class="modal-image">
+          <img id="modal-event-img" src="" alt="">
+        </div>
+        <div class="modal-details">
+          <div class="modal-header">
+            <h2 id="modal-event-title"></h2>
+            <div class="event-meta">
+              <span id="modal-event-date"><i class="far fa-calendar-alt"></i></span>
+              <span id="modal-event-location"><i class="fas fa-map-marker-alt"></i></span>
+            </div>
+          </div>
+          <div class="modal-description">
+            <p id="modal-event-desc"></p>
+          </div>
+          <div class="modal-actions">
+            <a href="#" id="modal-event-btn" class="btn">Register Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer-section">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="Image/NEW LOGO.png" alt="Logo">
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-envelope"></i> info@example.com</p>
+        <p><i class="fas fa-phone"></i> +123 456 7890</p>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 St. Joseph's College. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="events.js"></script>
+</body>
+</html>

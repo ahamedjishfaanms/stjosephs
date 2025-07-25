@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team - St. Joseph's College</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader-content">
+      <img src="image/preloader.gif" alt="Loading...">
+      <div class="loading-text">Loading...</div>
+    </div>
+  </div>
+
+  <!-- Top Section -->
+  <div class="top-section">
+    <div class="contact-info">
+      <a href="mailto:info@example.com">
+        <i class="fas fa-envelope"></i>
+        <span class="contact-text">info@example.com</span>
+      </a>
+      <a href="tel:+1234567890">
+        <i class="fas fa-phone"></i>
+        <span class="contact-text">+123 456 7890</span>
+      </a>
+    </div>
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="Image/NEW LOGO.png" alt="Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="about active">
+        <a href="#">About</a>
+        <ul class="sub-menu">
+          <li><a href="department.html">Department</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="clubs.html">Clubs</a></li>
+        </ul>
+      </li>
+      <li class="activities">
+        <a href="#">Activities</a>
+        <ul class="sub-menu">
+          <li><a href="events.html">Events</a></li>
+          <li><a href="placement.html">Placement</a></li>
+        </ul>
+      </li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="login.html" class="login">Login</a></li>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+
+  <!-- Team Hero Section -->
+  <section class="team-hero">
+    <div class="team-hero-content">
+      <h1>Meet Our Team</h1>
+      <p>Dedicated educators shaping the future of technology</p>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="team-container">
+      <div class="section-header">
+        <h2 class="section-title">Our Faculty Members</h2>
+        <p class="section-subtitle">Experienced professionals committed to academic excellence</p>
+      </div>
+      
+      <!-- Department Filter -->
+      <div class="department-filter">
+        <button class="filter-btn active" data-department="all">All Departments</button>
+        <button class="filter-btn" data-department="computer-science">Computer Science</button>
+        <button class="filter-btn" data-department="mathematics">Mathematics</button>
+        <button class="filter-btn" data-department="physics">Physics</button>
+        <button class="filter-btn" data-department="chemistry">Chemistry</button>
+      </div>
+      
+      <!-- Search Box -->
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="faculty-search" placeholder="Search faculty by name...">
+      </div>
+      
+      <div class="faculties-grid" id="faculties-container">
+        <!-- Faculty cards will be dynamically inserted here -->
+        <div class="faculty-card" data-department="computer-science">
+          <div class="faculty-image">
+            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Dr. Sarah Johnson">
+          </div>
+          <div class="faculty-info">
+            <h3>Dr. Sarah Johnson</h3>
+            <p class="department">Computer Science</p>
+            <p class="position">Professor & HOD</p>
+            <div class="faculty-social">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+              <a href="#"><i class="fas fa-user-graduate"></i></a>
+            </div>
+            <button class="profile-btn">View Profile</button>
+          </div>
+        </div>
+        
+        <div class="faculty-card" data-department="mathematics">
+          <div class="faculty-image">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Michael Chen">
+          </div>
+          <div class="faculty-info">
+            <h3>Dr. Michael Chen</h3>
+            <p class="department">Mathematics</p>
+            <p class="position">Associate Professor</p>
+            <div class="faculty-social">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+              <a href="#"><i class="fas fa-user-graduate"></i></a>
+            </div>
+            <button class="profile-btn">View Profile</button>
+          </div>
+        </div>
+        
+        <div class="faculty-card" data-department="computer-science">
+          <div class="faculty-image">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Prof. Emily Rodriguez">
+          </div>
+          <div class="faculty-info">
+            <h3>Prof. Emily Rodriguez</h3>
+            <p class="department">Computer Science</p>
+            <p class="position">Assistant Professor</p>
+            <div class="faculty-social">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+              <a href="#"><i class="fas fa-user-graduate"></i></a>
+            </div>
+            <button class="profile-btn">View Profile</button>
+          </div>
+        </div>
+        
+        <div class="faculty-card" data-department="physics">
+          <div class="faculty-image">
+            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Dr. Robert Williams">
+          </div>
+          <div class="faculty-info">
+            <h3>Dr. Robert Williams</h3>
+            <p class="department">Physics</p>
+            <p class="position">Professor</p>
+            <div class="faculty-social">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+              <a href="#"><i class="fas fa-user-graduate"></i></a>
+            </div>
+            <button class="profile-btn">View Profile</button>
+          </div>
+        </div>
+        
+        <div class="faculty-card" data-department="chemistry">
+          <div class="faculty-image">
+            <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Dr. Lisa Thompson">
+          </div>
+          <div class="faculty-info">
+            <h3>Dr. Lisa Thompson</h3>
+            <p class="department">Chemistry</p>
+            <p class="position">Associate Professor</p>
+            <div class="faculty-social">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+              <a href="#"><i class="fas fa-user-graduate"></i></a>
+            </div>
+            <button class="profile-btn">View Profile</button>
+          </div>
+        </div>
+        
+        <div class="faculty-card" data-department="computer-science">
+          <div class="faculty-image">
+            <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Prof. David Kim">
+          </div>
+          <div class="faculty-info">
+            <h3>Prof. David Kim</h3>
+            <p class="department">Computer Science</p>
+            <p class="position">Assistant Professor</p>
+            <div class="faculty-social">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+              <a href="#"><i class="fas fa-user-graduate"></i></a>
+            </div>
+            <button class="profile-btn">View Profile</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="load-more">
+        <button id="load-more-btn" class="btn">Load More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Faculty Modal -->
+  <div class="faculty-modal" id="faculty-modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-body">
+        <div class="modal-image">
+          <img id="modal-faculty-img" src="" alt="">
+        </div>
+        <div class="modal-details">
+          <div class="modal-header">
+            <h2 id="modal-faculty-name"></h2>
+            <p class="department" id="modal-faculty-dept"></p>
+            <p class="position" id="modal-faculty-pos"></p>
+            <div class="modal-social">
+              <a href="#" id="modal-linkedin"><i class="fab fa-linkedin"></i></a>
+              <a href="#" id="modal-email"><i class="fas fa-envelope"></i></a>
+              <a href="#" id="modal-profile"><i class="fas fa-user-graduate"></i></a>
+            </div>
+          </div>
+          <div class="modal-bio">
+            <h3>Biography</h3>
+            <p id="modal-bio-text"></p>
+          </div>
+          <div class="modal-qualifications">
+            <h4>Qualifications</h4>
+            <ul id="modal-qualifications">
+              <!-- Filled by JavaScript -->
+            </ul>
+          </div>
+          <div class="modal-research">
+            <h4>Research Interests</h4>
+            <ul id="modal-research">
+              <!-- Filled by JavaScript -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer-section">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="Image/NEW LOGO.png" alt="Logo">
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Activities</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-envelope"></i> info@example.com</p>
+        <p><i class="fas fa-phone"></i> +123 456 7890</p>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 St. Joseph's College. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="faculty.js"></script>
+</body>
+</html>
