@@ -3655,3 +3655,10 @@ a {
     transform: translateY(0);
   }
 }
+
+/* Launch Page Styles */
+.launch-page body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
