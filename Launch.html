@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Launching Soon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Launch Page Specific Styles */
+    .launch-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #09122C 0%, #1a2a6c 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      z-index: 9999;
+      overflow: hidden;
+    }
+    
+    .launch-content {
+      max-width: 800px;
+      padding: 20px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .launch-logo {
+      width: 150px;
+      margin-bottom: 30px;
+    }
+    
+    .launch-title {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    
+    .launch-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      opacity: 0.9;
+    }
+    
+    .launch-button {
+      padding: 15px 40px;
+      background: linear-gradient(45deg, #BE3144 0%, #E17564 100%);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .launch-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .launch-button:active {
+      transform: translateY(0);
+    }
+    
+    /* Rocket Animation */
+    .rocket-container {
+      position: absolute;
+      bottom: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 200px;
+      transition: all 0.5s ease;
+      opacity: 0;
+    }
+    
+    .rocket {
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 2.5c0 0 4.5 2.04 4.5 10.5 0 2.49-1.04 5.57-1.6 7H9.1c-.56-1.43-1.6-4.51-1.6-7C7.5 4.54 12 2.5 12 2.5zm2 8.5c0-1.1-.9-2-2-2s-2 .9-2 2 .9 2 2 2 2-.9 2-2zm-6.31 9.52c-.48-1.23-1.52-4.17-1.67-6.87l-1.13.75c-.56.38-.89 1-.89 1.67V22l3.69-1.48zM20 22v-5.93c0-.67-.33-1.29-.89-1.66l-1.13-.75c-.15 2.69-1.2 5.64-1.67 6.87L20 22z"/></svg>') no-repeat center center;
+      background-size: contain;
+      position: relative;
+    }
+    
+    .exhaust {
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 0;
+      background: linear-gradient(to top, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+      border-radius: 50% 50% 0 0;
+      transition: height 0.3s ease;
+    }
+    
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    
+    .star {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      animation: twinkle 2s infinite alternate;
+    }
+    
+    @keyframes twinkle {
+      0% { opacity: 0.2; }
+      100% { opacity: 1; }
+    }
+    
+    /* Launch Animation */
+    .launching .rocket-container {
+      opacity: 1;
+      bottom: 100vh;
+      transition: all 4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+    
+    .launching .exhaust {
+      height: 100px;
+      animation: exhaust 0.2s infinite alternate;
+    }
+    
+    .launching .launch-content {
+      animation: fadeOut 1s forwards 2s;
+    }
+    
+    @keyframes exhaust {
+      0% { transform: translateX(-50%) scaleX(1); }
+      100% { transform: translateX(-50%) scaleX(1.5); }
+    }
+    
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="launch-container">
+    <div class="stars" id="stars"></div>
+    
+    <div class="launch-content">
+      <img src="Image/NEW LOGO.png" alt="Logo" class="launch-logo">
+      <h1 class="launch-title">Welcome to BCA St. Joseph's</h1>
+      <p class="launch-subtitle">Our new website is ready for launch!</p>
+      <button class="launch-button" id="launchButton">Launch Website</button>
+    </div>
+    
+    <div class="rocket-container" id="rocket">
+      <div class="rocket">
+        <div class="exhaust"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Create stars
+    const starsContainer = document.getElementById('stars');
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.width = `${Math.random() * 3 + 1}px`;
+      star.style.height = star.style.width;
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.top = `${Math.random() * 100}%`;
+      star.style.animationDelay = `${Math.random() * 2}s`;
+      starsContainer.appendChild(star);
+    }
+    
+    // Launch button functionality
+    const launchButton = document.getElementById('launchButton');
+    const rocket = document.getElementById('rocket');
+    const launchContainer = document.querySelector('.launch-container');
+    
+    launchButton.addEventListener('click', function() {
+      // Start launch sequence
+      launchContainer.classList.add('launching');
+      
+      // Redirect after animation completes
+      setTimeout(function() {
+        window.location.href = 'index.html';
+      }, 4000);
+    });
+  </script>
+</body>
+</html>
